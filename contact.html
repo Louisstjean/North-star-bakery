@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact and pre-orders | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main-content">Skip to main content</a>
+<header>
+  <a class="brand" href="index.html">North Star Bakery<span>Handmade for our neighborhood</span></a>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Bakery products</a></li>
+      <li><a href="about.html">About our bakery</a></li>
+      <li><a href="contact.html" aria-current="page">Contact and pre-orders</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main-content" tabindex="-1">
+  <h1>Contact us and request a pre-order</h1>
+  <section>
+    <h2>Visit our bakery</h2>
+    <address>Sample address: 123 Main Street, Your Town.</address>
+    <p>Sample hours: Monday–Saturday, 7 a.m.–5 p.m.;
+       Sunday, 8 a.m.–1 p.m.</p>
+  </section>
+  <section>
+    <h2>Inquiry and pre-order request</h2>
+    <p id="form-help">Fields marked required must be completed.
+       This practice form has no connected submission service.
+       It does not place an order or reserve a pickup time.</p>
+    <form action="contact.html" method="get"
+          aria-describedby="form-help">
+      <fieldset>
+        <legend>Your contact information</legend>
+        <p><label for="name">Name (required)</label><br>
+          <input id="name" name="name" type="text"
+                 autocomplete="name" minlength="2"
+                 maxlength="80" required></p>
+        <p><label for="email">Email (required)</label><br>
+          <input id="email" name="email" type="email"
+                 autocomplete="email" maxlength="254" required></p>
+      </fieldset>
+      <fieldset>
+        <legend>Your bakery request</legend>
+        <p><label for="request-type">Request type (required)</label><br>
+          <select id="request-type" name="request_type" required>
+            <option value="">Choose a request type</option>
+            <option value="pre-order">Pre-order request</option>
+            <option value="question">General question</option>
+          </select></p>
+        <p><label for="pickup-date">Preferred pickup date</label><br>
+          <input id="pickup-date" name="pickup_date" type="date"></p>
+        <p>For a pre-order, include a pickup date and quantities.
+           For a general question, the date may be left blank.</p>
+        <p><label for="details">Item details or question
+            (required)</label><br>
+          <textarea id="details" name="details" rows="5" cols="35"
+                    minlength="10" maxlength="1000" required></textarea></p>
+        <p><label for="allergies">Allergy notes (if applicable)</label><br>
+          <textarea id="allergies" name="allergy_notes"
+                    rows="3" cols="35" maxlength="500"></textarea></p>
+      </fieldset>
+      <p><button type="submit">Check practice request</button></p>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>North Star Bakery — handmade for our neighborhood.</p>
+  <p>Student website: business details and prices are sample content.</p>
+</footer>
+</body>
+</html>
