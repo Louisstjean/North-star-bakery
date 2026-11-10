@@ -55,3 +55,18 @@ footer p:last-child { font-size:.8rem; }
  main>img { flex:0 0 120px; margin-right:100%; }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+
+
+/* Favorites and form feedback. */
+main > #favorites { flex-basis:100%; }
+#favorites ul { margin-bottom:0; }
+#favorites ul:empty { display:none; }
+.favorite-toggle { margin-top:1rem; }
+.favorite-toggle[aria-pressed="true"] { background:var(--cream); color:var(--brown); }
+.favorite-toggle[aria-pressed="true"]::before { content:"✓ "; }
+.field-error, .field-note { display:block; font-size:.9rem; }
+.field-error, [aria-invalid="true"] { color:#8b2424; }
+[aria-invalid="true"] { border:2px solid #8b2424; }
+.field-error { font-weight:bold; }
+.field-error:not(:empty), .field-note:not(:empty) { margin-top:.35rem; }
+#request-status:not(:empty) { padding:.6rem .8rem; border-left:3px solid var(--brown); }
